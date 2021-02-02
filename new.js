@@ -1,22 +1,42 @@
+/*
 var sample = {"RetailStoreID": "219", "WorkstationID": "1", "TillID": "219001000518", "SequenceNumber": "30856",
 "BusinessDayDate": "2020-09-18", "BeginDateTime": "2020-09-22T12:22:48.774", "EndDateTime": "2020-09-23T09:34:04.723",
-"OperatorID": "5", "CurrencyCode": "USD", "RetailTransaction": {"LineItem": [{"SequenceNumber": "1", "BeginDateTime": "2020-09-22T12:26:43.655",
+"OperatorID": "5", "CurrencyCode": "USD", "RetailTransaction": {"CustomerAccount" : {"LoyaltyAccount" : {"LoyaltyAccountID" : "111", "dummy" : "dummy2"}, "dummy" : "dummy11"},"LineItem": [{"SequenceNumber": "1", "BeginDateTime": "2020-09-22T12:26:43.655",
  "EndDateTime": "2020-09-22T12:26:43.707", "Sale": {"ItemID": "83931800052", "Description": "1 + 1 = 3 Cava Brut", "RegularSalesUnitPrice": "16.49",
  "ActualSalesUnitPrice": "16.49", "ExtendedAmount": "16.49", "Quantity": "1", "ScannedItemID": "83931800052", "GiftReceiptFlag": "false",
  "Associate": {"AssociateID": "5"}, "PercentageOfItem": {"AssociateID": "5", "Percentage": "1"}, "Tax": {"TaxAuthority": "TA-VA-219-N",
  "Amount": "0.0000000", "TaxLocationId": "GR-VA-219", "TaxGroupId": "1"}}}], "RoundedTotal": "0.00",
- "CustomerAccount": {"LoyaltyAccount": {"LoyaltyAccountID": "8325268168958"}},
+ "CustomerAccount": {"LoyaltyAccount": {"LoyaltyAccountID": "8325268168958", "dummy" : "dummy11"}, "dummy" : "dummy2"},
  "Customer": {"Name": "Johnny Smith", "ActiveFlag": "true", "Address": {"AddressLine": "123 HOME", "City": "VB", "State": "VA", "PostalCode": "12345"},
  "eMail": "wineshop1@gmail.com", "AccountNumber": "3263030", "AlternateKey": [{"AlternateID": "205022000003"}, {"AlternateID": "3263030"}]}},
- "TransactionID": "00219000012020091800030856"};
+ "TransactionID": "00219000012020091800030856"};*/
 
-//var sample = {"RetailTransaction": {"LineItem" : [{"Sale" : {"RetailPriceModifier" : [{"Amount" : 50, "Coupon" : {"ScanCode" : "111"}}, {"Amount" : 50, "Coupon" : {"ScanCode" : "111"}}]}},
+var sample = {"TransactionType":"RETAIL_SALE","xmlns:ns0":"http://v4.ws.poslog-ext.xcenter.dtv/","CancelFlag":"false","WorkstationID":"2","RetailTransaction":{"TypeCode":"Transaction","TransactionStatus":"Delivered","RoundedTotal":"0.00","LineItem":[{"SequenceNumber":"1","BeginDateTime":"2021-01-27T13:36:15.796","Sale":{"ScannedItemID":"338065120007","Associate":{"AssociateID":"5"},"ExtendedAmount":"113.96","RetailPriceModifier":[{"SequenceNumber":"1","ReasonCode":"DEAL","MethodCode":"Promotion","PromotionID":"6814:28368:","VoidFlag":"false","Amount":{"text":"6.00","Action":"Subtract"}}],"ItemID":"338065120007","PercentageOfItem":{"Percentage":"1","AssociateID":"5"},"GiftReceiptFlag":"false","Tax":{"Percent":"0.0000000","TaxType":"Sales","VoidFlag":"false","Amount":"0.0000000","TaxGroupId":"1","TaxableAmount":"113.96","TaxAuthority":"TA-VA-219-N","TaxLocationId":"GR-VA-219"},"Description":"Item 1","RegularSalesUnitPrice":"29.99","Quantity":"4","ItemType":"Stock","ActualSalesUnitPrice":"28.49"},"VoidFlag":"false","EndDateTime":"2021-01-27T13:36:15.871","EntryMethod":"Keyed"},{"EndDateTime":"2021-01-27T13:36:19.133","SequenceNumber":"2","EntryMethod":"Keyed","Sale":{"ItemID":"338065120007","RegularSalesUnitPrice":"29.99","GiftReceiptFlag":"false","ScannedItemID":"338065120007","ExtendedAmount":"26.99","ActualSalesUnitPrice":"26.99","ItemType":"Stock","Description":"Item 1","RetailPriceModifier":[{"PromotionID":"6814:28368:","ReasonCode":"DEAL","VoidFlag":"false","MethodCode":"Promotion","SequenceNumber":"1","Amount":{"Action":"Subtract","text":"3.00"}}],"Associate":{"AssociateID":"5"},"PercentageOfItem":{"Percentage":"1","AssociateID":"5"},"Tax":{"TaxType":"Sales","TaxLocationId":"GR-VA-219","Amount":"0.0000000","TaxAuthority":"TA-VA-219-N","Percent":"0.0000000","VoidFlag":"false","TaxableAmount":"26.99","TaxGroupId":"1"},"Quantity":"1"},"VoidFlag":"false","BeginDateTime":"2021-01-27T13:36:19.086"},{"Sale":{"ExtendedAmount":"27.00","Description":"Item 1","Quantity":"1","ItemID":"338065120007","RegularSalesUnitPrice":"29.99","PercentageOfItem":{"AssociateID":"5","Percentage":"1"},"RetailPriceModifier":[{"SequenceNumber":"1","ReasonCode":"DEAL","Amount":{"Action":"Subtract","text":"2.99"},"MethodCode":"Promotion","VoidFlag":"false","PromotionID":"6814:28368:"}],"GiftReceiptFlag":"false","ActualSalesUnitPrice":"27.00","ItemType":"Stock","Associate":{"AssociateID":"5"},"ScannedItemID":"338065120007","Tax":{"VoidFlag":"false","TaxableAmount":"27.00","TaxType":"Sales","TaxGroupId":"1","Percent":"0.0000000","Amount":"0.0000000","TaxAuthority":"TA-VA-219-N","TaxLocationId":"GR-VA-219"}},"EndDateTime":"2021-01-27T13:36:21.173","SequenceNumber":"3","VoidFlag":"false","EntryMethod":"Keyed","BeginDateTime":"2021-01-27T13:36:21.124"},{"EntryMethod":"Keyed","SequenceNumber":"4","VoidFlag":"false","BeginDateTime":"2021-01-27T13:36:40.705","Sale":{"RegularSalesUnitPrice":"29.99","ItemType":"Stock","ActualSalesUnitPrice":"26.99","ItemID":"68292121276","Quantity":"2","GiftReceiptFlag":"false","ScannedItemID":"68292121276","RetailPriceModifier":[{"Amount":{"text":"6.00","Action":"Subtract"},"PromotionID":"6814:28368:","ReasonCode":"DEAL","MethodCode":"Promotion","VoidFlag":"false","SequenceNumber":"1"}],"Tax":{"Percent":"0.0000000","TaxGroupId":"1","TaxType":"Sales","TaxLocationId":"GR-VA-219","VoidFlag":"false","TaxableAmount":"53.98","TaxAuthority":"TA-VA-219-N","Amount":"0.0000000"},"Description":"Item 2","Associate":{"AssociateID":"5"},"PercentageOfItem":{"Percentage":"1","AssociateID":"5"},"ExtendedAmount":"53.98"},"EndDateTime":"2021-01-27T13:36:40.794"},{"SequenceNumber":"5","VoidFlag":"false","BeginDateTime":"2021-01-27T13:37:16.334","EndDateTime":"2021-01-27T13:37:16.801","Tender":{"TypeCode":"Sale","TenderType":"Cash","TenderID":"USD_CURRENCY","ChangeFlag":"false","Amount":{"Currency":"USD","text":"221.93"}}},{"VoidFlag":"false","BeginDateTime":"2021-01-27T13:36:15.915","EndDateTime":"2021-01-27T13:36:15.915","SequenceNumber":"6","Tax":{"TaxType":"Sales","TaxableAmount":"221.93","Percent":"0.0000000","TaxLocationId":"GR-VA-219","TaxGroupId":"1","Amount":"0.0000000","TaxAuthority":"TA-VA-219-N","VoidFlag":"false"}}],"Total":{"TotalType":"TransactionGrandAmount","text":"221.93"}},"EndDateTime":"2021-01-27T13:37:16.881","TillID":"219002000146","OfflineFlag":"false","BeginDateTime":"2021-01-27T13:36:15.871","BusinessDayDate":"2021-01-27","CurrencyCode":"USD","TransactionID":"00219000022021012700003400","OperatorID":"5","SequenceNumber":"3400","AppVersion":"17.0.2.0.46 - 7.2.1 - 0.0","RetailStoreID":"219","TrainingModeFlag":"false"};
+//var sample = {"RetailTransaction": {"LineItem" : [{"Sale" : {"RetailPriceModifier" : [{"Amount" : 50, "Coupon" : {"ScanCode" : "111"}}, {"Amount" : 70, "Coupon" : {"ScanCode" : "111"}}]}}]}};
 //{"Sale" : {"RetailPriceModifier" : [{"Amount" : 50, "Coupon" : {"ScanCode" : "111"}}]}}]}};
 //var sample = {
   //"PosTransactionProperties" : [{"PosTransactionPropertyValue" : "some values", "PosTransactionPropertyCode" : "some code"}, {"PosTransactionPropertyValue" : "some values", "PosTransactionPropertyCode" : "some code"}]
 //};
 //result["RetailTransaction"]["LineItem"]["Tender"]
-function returnArr(array, keys){
+function get(object, keyList) {
+    //var keyList = key.split(".");
+    if(typeof object == "undefined" || object == null) return null;
+    if(keyList.length == 1){
+      var result = object[keyList[0]];
+    }
+    else{
+      var result = object[keyList[0]];
+      if(typeof result == "undefined") return null;
+      for(i = 1; i < keyList.length; i++){
+        var result = result[keyList[i]];
+        if(typeof result == "undefined") return null;
+      }
+    }
+    return (typeof result !== "undefined") ? result : null;
+}
+
+function returnArr(array, keys){//function works right, passed parameter type is not right
+  //console.log(typeof array == 'Array');
   var returnArray = [];
   if(typeof array == "undefined" || array == null ){
     var tempArr = null;
@@ -25,8 +45,16 @@ function returnArr(array, keys){
       //console.log(key);
       //var obj = {};
       var key = keys[j];
-      console.log(key);
-      tempDict[key] = get(tempArr, [key]);
+      //console.log(typeof key);
+      var keyList = key.split(",");
+      //keyList = ["Coupon", "ScanCode"]
+      if(keyList.length == 1) tempDict[key] = get(tempArr, [key]);
+      else{
+        //console.log(i);
+      tempDict[keyList[0]] = get(get(tempArr, [keyList[0]]), keyList.slice(1, keyList.length));
+      //console.log(get(tempArr, keyList));
+    }
+
   }
     returnArray.push(tempDict);
   }
@@ -34,23 +62,36 @@ function returnArr(array, keys){
 
 //keys = ["LineItemPropertyValue", "LineItemPropertyCode"]
   else{
+  //console.log(array[1]);
   for(i = 0; i < array.length; i++){
+    //console.log(i);
     var tempArr = array[i];
+    //console.log(tempArr);
+    //console.log(keys.length);
     var tempDict = {};
     for(j = 0; j < keys.length; j++){
-      //console.log(key);
-      //var obj = {};
       var key = keys[j];
-      console.log(typeof key);
-      tempDict[key] = get(tempArr, [key]);
+      //console.log(keys.length);
+      var keyList = key.split(",");
+
+      if(keyList.length == 1) tempDict[key] = get(tempArr, [key]);
+      else{
+        //console.log(i);
+      tempDict[keyList[0]] = get(tempArr[keyList[0]], keyList.slice(1, keyList.length));
+      //console.log(get(tempArr, keyList));
+
+    }
   }
     returnArray.push(tempDict);
+    //console.log(i);
   }
 }
+  //console.log(returnArray);
   return returnArray;
 }
 
-
+var tmp = [{"abc" : "def", "des" : "uhs"}, {"234" : "345"}];
+//console.log(returnArr(tmp, ["abc", "efg"]));
 
 // Also need to figure out a systematic way to only access if it exists, otherwise set it to null;
 
@@ -59,7 +100,11 @@ function retailTransactionProcessor(rt){
   var retailTransaction = {};
   //if(rt == null) return retailTransaction;
   retailTransaction.RoundedTotal = get(rt, ["RoundedTotal"]);
-  retailTransaction.CustomerAccount = get(rt, ["CustomerAccount"]);
+  retailTransaction.CustomerAccount = {
+    "LoyaltyAccount" : {
+      "LoyaltyAccountID" : get(rt, ["CustomerAccount", "LoyaltyAccount", "LoyaltyAccountID"])
+    }
+  }
 
   retailTransaction.Customer = {
     "Name" : get(rt, ["Customer", "Name"]),
@@ -127,19 +172,6 @@ function retailTransactionProcessor(rt){
         "SerialNumber" : get(lineItem, ["Tender", "SerialNumber"]),
         //"LineItemProperty" : get(lineItem, ["Tender", "LineItemProperty"]),
         "LineItemProperty" : returnArr(get(lineItem, ["Tender", "LineItemProperty"]), ["LineItemPropertyValue", "LineItemPropertyCode"]),
-        /*
-        "LineItemProperty" : [{
-          "LineItemPropertyValue" : null,
-          "LineItemPropertyCode" : null
-        }],
-        for(i = 0; i < lineItem["Tender"]["LineItemProperty"].length; i++){
-          "LineItemProperty".push({
-            "LineItemPropertyValue" : lineItem["Tender"]["LineItemProperty"][i]["LineItemPropertyValue"],
-            "LineItemPropertyCode" : lineItem["Tender"]["LineItemProperty"][i]["LineItemPropertyCode"]
-          });
-        }*/
-
-
 
         "Authorization" : {
           "AuthorizationDateTime" : get(lineItem, ["Tender", "Authorization", "AuthorizationDateTime"]),
@@ -198,38 +230,11 @@ function retailTransactionProcessor(rt){
           //"RetailPriceModifier" : get(lineItem, ["Return", "RetailPriceModifier"]),
           "RetailPriceModifier" : returnArr(get(lineItem, ["Return", "RetailPriceModifier"]), [ "PreviousPrice", "Amount", "SequenceNumber", "ReasonCode", "DiscountReasonCode", "NewPrice"]),
 
-          /*
-          "RetailPriceModifier" : [],
-          for(i = 0; i < lineItem["Return"]["RetailPriceModifier"].length; i++){
-            "RetailPriceModifier".push({
-              "PreviousPrice" : lineItem["Return"]["RetailPriceModifier"][i]["PreviousPrice"],
-              "Amount" : lineItem["Return"]["RetailPriceModifier"][i]["Amount"],
-              "SequenceNumber" : lineItem["Return"]["RetailPriceModifier"][i]["SequenceNumber"],
-              "ReasonCode" : lineItem["Return"]["RetailPriceModifier"][i]["ReasonCode"],
-              "DiscountReasonCode" : lineItem["Return"]["RetailPriceModifier"][i]["DiscountReasonCode"],
-              "NewPrice" : lineItem["Return"]["RetailPriceModifier"][i]["NewPrice"]
-            });
-          }*/
         },
         "Sale" : {
           "ActualSalesUnitPrice" : get(lineItem, ["Sale", "ActualSalesUnitPrice"]),
           "SerialNumber" : get(lineItem, ["Sale", "SerialNumber"]),
-          //"RetailPriceModifier" : get(lineItem, ["Sale", "RetailPriceModifier"]),
-          "RetailPriceModifier" : returnArr(get(lineItem, ["Sale", "RetailPriceModifier"]), ["ReasonCode", "PromotionID","Amount","SequenceNumber","SerialNumber","Coupon"]),
-          /*
-          "RetailPriceModifier" : [],
-          for(i = 0; i < lineItem["Sale"]["RetailPriceModifier"].length; i++){
-            "RetailPriceModifier".push({
-              "ReasonCode" : lineItem["Sale"]["RetailPriceModifier"][i]["ReasonCode"],
-              "PromotionID" : lineItem["Sale"]["RetailPriceModifier"][i]["PromotionID"],
-              "Amount" : lineItem["Sale"]["RetailPriceModifier"][i]["Amount"],
-              "SequenceNumber" : lineItem["Sale"]["RetailPriceModifier"][i]["SequenceNumber"],
-              "SerialNumber" : lineItem["Sale"]["RetailPriceModifier"][i]["SerialNumber"],
-              "Coupon" : {
-                "ScanCode" : lineItem["Sale"]["RetailPriceModifier"][i]["Coupon"]["ScanCode"]
-              }
-            });
-          }*/
+          "RetailPriceModifier" : returnArr(get(lineItem, ["Sale", "RetailPriceModifier"]), ["ReasonCode", "PromotionID","Amount","SequenceNumber","SerialNumber","Coupon,ScanCode"]),//there's a ScanCode under Coupon
 
           "ItemID" : get(lineItem, ["Sale", "ItemID"]),
           "GiftReceiptFlag" : get(lineItem, ["Sale", "GiftReceiptFlag"]),
@@ -310,19 +315,6 @@ else{
       "SerialNumber" : get(lineItem, ["Tender", "SerialNumber"]),
       //"LineItemProperty" : get(lineItem, ["Tender", "LineItemProperty"]),
       "LineItemProperty" : returnArr(get(lineItem, ["Tender", "LineItemProperty"]), ["LineItemPropertyValue", "LineItemPropertyCode"]),
-      /*
-      "LineItemProperty" : [{
-        "LineItemPropertyValue" : null,
-        "LineItemPropertyCode" : null
-      }],
-      for(i = 0; i < lineItem["Tender"]["LineItemProperty"].length; i++){
-        "LineItemProperty".push({
-          "LineItemPropertyValue" : lineItem["Tender"]["LineItemProperty"][i]["LineItemPropertyValue"],
-          "LineItemPropertyCode" : lineItem["Tender"]["LineItemProperty"][i]["LineItemPropertyCode"]
-        });
-      }*/
-
-
 
       "Authorization" : {
         "AuthorizationDateTime" : get(lineItem, ["Tender", "Authorization", "AuthorizationDateTime"]),
@@ -381,38 +373,12 @@ else{
         //"RetailPriceModifier" : get(lineItem, ["Return", "RetailPriceModifier"]),
         "RetailPriceModifier" : returnArr(get(lineItem, ["Return", "RetailPriceModifier"]), [ "PreviousPrice", "Amount", "SequenceNumber", "ReasonCode", "DiscountReasonCode", "NewPrice"]),
 
-        /*
-        "RetailPriceModifier" : [],
-        for(i = 0; i < lineItem["Return"]["RetailPriceModifier"].length; i++){
-          "RetailPriceModifier".push({
-            "PreviousPrice" : lineItem["Return"]["RetailPriceModifier"][i]["PreviousPrice"],
-            "Amount" : lineItem["Return"]["RetailPriceModifier"][i]["Amount"],
-            "SequenceNumber" : lineItem["Return"]["RetailPriceModifier"][i]["SequenceNumber"],
-            "ReasonCode" : lineItem["Return"]["RetailPriceModifier"][i]["ReasonCode"],
-            "DiscountReasonCode" : lineItem["Return"]["RetailPriceModifier"][i]["DiscountReasonCode"],
-            "NewPrice" : lineItem["Return"]["RetailPriceModifier"][i]["NewPrice"]
-          });
-        }*/
       },
       "Sale" : {
         "ActualSalesUnitPrice" : get(lineItem, ["Sale", "ActualSalesUnitPrice"]),
         "SerialNumber" : get(lineItem, ["Sale", "SerialNumber"]),
         //"RetailPriceModifier" : get(lineItem, ["Sale", "RetailPriceModifier"]),
-        "RetailPriceModifier" : returnArr(get(lineItem, ["Sale", "RetailPriceModifier"]), ["ReasonCode", "PromotionID","Amount","SequenceNumber","SerialNumber","Coupon"]),
-        /*
-        "RetailPriceModifier" : [],
-        for(i = 0; i < lineItem["Sale"]["RetailPriceModifier"].length; i++){
-          "RetailPriceModifier".push({
-            "ReasonCode" : lineItem["Sale"]["RetailPriceModifier"][i]["ReasonCode"],
-            "PromotionID" : lineItem["Sale"]["RetailPriceModifier"][i]["PromotionID"],
-            "Amount" : lineItem["Sale"]["RetailPriceModifier"][i]["Amount"],
-            "SequenceNumber" : lineItem["Sale"]["RetailPriceModifier"][i]["SequenceNumber"],
-            "SerialNumber" : lineItem["Sale"]["RetailPriceModifier"][i]["SerialNumber"],
-            "Coupon" : {
-              "ScanCode" : lineItem["Sale"]["RetailPriceModifier"][i]["Coupon"]["ScanCode"]
-            }
-          });
-        }*/
+        "RetailPriceModifier" : returnArr(get(lineItem, ["Sale", "RetailPriceModifier"]), ["ReasonCode", "PromotionID","Amount","SequenceNumber","SerialNumber","Coupon,ScanCode"]),
 
         "ItemID" : get(lineItem, ["Sale", "ItemID"]),
         "GiftReceiptFlag" : get(lineItem, ["Sale", "GiftReceiptFlag"]),
@@ -452,37 +418,11 @@ else{
   return retailTransaction;
 }
 
-function get(object, keyList) {
-    //var keyList = key.split(".");
-    if(typeof object == "undefined" || object == null) return null;
-    if(keyList.length == 1){
-      var result = object[keyList[0]];
-    }
-    else{
-      var result = object[keyList[0]];
-      if(typeof result == "undefined") return null;
-      for(i = 1; i < keyList.length; i++){
-        var result = result[keyList[i]];
-        if(typeof result == "undefined") return null;
-      }
-    }
-    return (typeof result !== "undefined") ? result : null;
-}
 
-/*
-function addKey(pubSubMessageJson, keyList){
-  var processedJson = {};
-  for(key in keyList){
-    if(typeof key == "string"){
-      processedJson.key = get(pubSubMessageJson, key);
-    }
-    else{
 
-    }
-  }
-}
-*/
-
+var tmp = get({"abs" : [{"dcs" : {"ooo" : "ooo"}, "ooo": "wef"}, {"dcs" : {"ooo" : "hgf"}},{"oij" : "kkk"}]}, ["abs"]);
+//console.log(tmp);
+//console.log(returnArr(tmp, ["dcs,ooo"]));
 function extract(pubSubMessageJson){
   //var pubSubMessageJson = JSON.parse(pubSubMessageString);
   var processedJson = {};
@@ -497,22 +437,7 @@ function extract(pubSubMessageJson){
   //processedJson.PosTransactionProperties = get(pubSubMessageJson,["PosTransactionProperties"]);
   processedJson.PosTransactionProperties = returnArr(get(pubSubMessageJson, ["PosTransactionProperties"]), ["PosTransactionPropertyValue", "PosTransactionPropertyCode"]);
 
-  //processedJson.PosTransactionProperties = get(pubSubMessageJson,["PosTransactionProperties"]);
-  /*
-  if(typeof pubSubMessageJson["PosTransactionProperties"] !== "undefined"){
-  for(i = 0; i < pubSubMessageJson["PosTransactionProperties"].length; i++){
-    processedJson.PosTransactionProperties.push({
-      "PosTransactionPropertyValue" : pubSubMessageJson["PosTransactionProperties"][i]["PosTransactionPropertyValue"],
-      "PosTransactionPropertyCode" : pubSubMessageJson["PosTransactionProperties"][i]["PosTransactionPropertyCode"]
-    });
-  }
-}
-else{
-  processedJson.PosTransactionProperties.push({
-    "PosTransactionPropertyValue" : null,
-    "PosTransactionPropertyCode" : null
-  });
-  */
+
   processedJson.BeginDateTime = get(pubSubMessageJson,["BeginDateTime"]);
   processedJson.CustomerID = get(pubSubMessageJson, ["CustomerID"]);
   processedJson.WorkstationID = get(pubSubMessageJson, ["WorkstationID"]);
@@ -521,8 +446,8 @@ else{
 
 
   //"BeginDateTime", "CustomerID", "WorkstationID", "CurrencyCode", "TransactionID"
-  return JSON.stringify(processedJson);
-  //return processedJson;
+  //return JSON.stringify(processedJson);
+  return processedJson["RetailTransaction"]["LineItem"];
 }
 
 result = extract(sample);
